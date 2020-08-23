@@ -16,7 +16,15 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
+  <!-- PWA: Add link rel manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- PWA: Areglos lighthouse -->
+  <meta name="description" content="Aplicación del Metro">
+  <meta name="theme-color" content="#2F3BA2" />
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
@@ -25,6 +33,7 @@
   <link rel="stylesheet" type="text/css" href="styles/inline.css">
 
 </head>
+
 <body>
 
   <header class="header">
@@ -71,10 +80,13 @@
           <option value="metros/1/hotel+de+ville/R">Hôtel de Ville, Direction Château de Vincennes</option>
           <option value="metros/1/chatelet/A">Châtelet, Direction La Défense</option>
           <option value="metros/1/chatelet/R">Châtelet, Direction Château de Vincennes</option>
-          <option value="metros/1/palais+royal+(musee+du+louvre)/A">Palais-Royal (Musee du Louvre), Direction La Défense</option>
-          <option value="metros/1/palais+royal+(musee+du+louvre)/R">Palais-Royal (Musee du Louvre), Direction Château de Vincennes</option>
+          <option value="metros/1/palais+royal+(musee+du+louvre)/A">Palais-Royal (Musee du Louvre), Direction La Défense
+          </option>
+          <option value="metros/1/palais+royal+(musee+du+louvre)/R">Palais-Royal (Musee du Louvre), Direction Château de
+            Vincennes</option>
           <option value="metros/1/champs+elysees+clemenceau/A">Champs-Elysees-Clemenceau, Direction La Défense</option>
-          <option value="metros/1/champs+elysees+clemenceau/R">Champs-Elysees-Clemenceau, Direction Château de Vincennes</option>
+          <option value="metros/1/champs+elysees+clemenceau/R">Champs-Elysees-Clemenceau, Direction Château de Vincennes
+          </option>
 
         </select>
       </div>
@@ -95,4 +107,5 @@
   <script src="scripts/app.js" async></script>
 
 </body>
+
 </html>
