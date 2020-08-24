@@ -2,13 +2,12 @@ const cacheName = 'cache-ver2';
 const cacheData = 'data-ver1';
 
 const cacheAssets = [
-
   '/',
   'index.html',
-  
+
   'images/ic_add_white_24px.svg',
   'images/ic_refresh_white_24px.svg',
-  
+
   'images/icons/train-512x512.png',
   'images/icons/train-256x256.png',
   'images/icons/train-192x192.png',
@@ -16,7 +15,6 @@ const cacheAssets = [
   'images/icons/train-144x144.png',
   'images/icons/train-128x128.png',
   'images/icons/train-32x32.png',
-  
   'scripts/app.js',
   'styles/inline.css',
 ];
@@ -75,7 +73,7 @@ self.addEventListener('fetch', (e) => {
       .catch(() => {
         return caches.open(cacheName)
           .then((cache) => {
-            return cache.match('offline.html');
+            return cache.match('');
           });
       })
   );

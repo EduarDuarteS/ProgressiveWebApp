@@ -15,29 +15,19 @@
 -->
 
 <!DOCTYPE html>
-
-<html lang="es">
-
+<html>
 <head>
-  <link rel="manifest" href="/manifest.json">
-  <meta name="description" content="Un simple aplicación meteorológica">
-  <meta name="theme-color" content="#2F3BA2" />
-
-  <!-- CODELAB: Add iOS meta tags and icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="PWA Clima">
-  <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/"> -->
+  <link rel="canonical" href="localhost">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paris Métro 1</title>
   <link rel="stylesheet" type="text/css" href="styles/inline.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#7D184A" />
+  <link rel="apple-touch-icon" href="/images/icon-152x152.png">
 
 </head>
-
 <body>
 
   <header class="header">
@@ -73,25 +63,21 @@
     <div class="dialog">
       <div class="dialog-title">Add new timetable</div>
       <div class="dialog-body">
-        <label for="selectTimetableToAdd"> Options </label>
         <select id="selectTimetableToAdd">
           <!-- Values map to Yahoo Weather API Where On Earth Identifiers (WOEIDs).
                https://developer.yahoo.com/weather/documentation.html#req -->
-          <option label="nation" value="metros/1/nation/A">Nation, Direction La Défense</option>
-          <option label="nation" value="metros/1/nation/R">Nation, Direction Château de Vincennes</option>
-          <option label="bastille" value="metros/1/bastille/R">Bastille, Direction Château de Vincennes</option>
-          <option label="bastille" value="metros/1/bastille/A">Bastille, Direction La Défense</option>
-          <option label="hotel" value="metros/1/hotel+de+ville/A">Hôtel de Ville, Direction La Défense</option>
-          <option label="hotel" value="metros/1/hotel+de+ville/R">Hôtel de Ville, Direction Château de Vincennes</option>
-          <option label="chatelet" value="metros/1/chatelet/A">Châtelet, Direction La Défense</option>
-          <option label="chatelet" value="metros/1/chatelet/R">Châtelet, Direction Château de Vincennes</option>
-          <option label="palais" value="metros/1/palais+royal+(musee+du+louvre)/A">Palais-Royal (Musee du Louvre), Direction La Défense
-          </option>
-          <option label="palais" value="metros/1/palais+royal+(musee+du+louvre)/R">Palais-Royal (Musee du Louvre), Direction Château de
-            Vincennes</option>
-          <option label="champs" value="metros/1/champs+elysees+clemenceau/A">Champs-Elysees-Clemenceau, Direction La Défense</option>
-          <option label="champs" value="metros/1/champs+elysees+clemenceau/R">Champs-Elysees-Clemenceau, Direction Château de Vincennes
-          </option>
+          <option value="metros/1/nation/A">Nation, Direction La Défense</option>
+          <option value="metros/1/nation/R">Nation, Direction Château de Vincennes</option>
+          <option value="metros/1/bastille/A">Bastille, Direction La Défense</option>
+          <option value="metros/1/bastille/R">Bastille, Direction Château de Vincennes</option>
+          <option value="metros/1/hotel+de+ville/A">Hôtel de Ville, Direction La Défense</option>
+          <option value="metros/1/hotel+de+ville/R">Hôtel de Ville, Direction Château de Vincennes</option>
+          <option value="metros/1/chatelet/A">Châtelet, Direction La Défense</option>
+          <option value="metros/1/chatelet/R">Châtelet, Direction Château de Vincennes</option>
+          <option value="metros/1/palais+royal+(musee+du+louvre)/A">Palais-Royal (Musee du Louvre), Direction La Défense</option>
+          <option value="metros/1/palais+royal+(musee+du+louvre)/R">Palais-Royal (Musee du Louvre), Direction Château de Vincennes</option>
+          <option value="metros/1/champs+elysees+clemenceau/A">Champs-Elysees-Clemenceau, Direction La Défense</option>
+          <option value="metros/1/champs+elysees+clemenceau/R">Champs-Elysees-Clemenceau, Direction Château de Vincennes</option>
 
         </select>
       </div>
@@ -109,18 +95,16 @@
   </div>
 
   <!-- Uncomment the line below when ready to test with fake data -->
+  <script src="scripts/localforage.min.js"></script>
   <script src="scripts/app.js" async></script>
-  <script>
-    // CODELAB: Register service worker.
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-          .then((reg) => {
-            console.log('Service worker registered.', reg);
-          });
-      });
-    }
-  </script>
-</body>
+  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.4.0/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
 </html>
