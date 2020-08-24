@@ -15,7 +15,8 @@
 -->
 
 <!DOCTYPE html>
-<html>
+
+<html lang="es">
 
 <head>
   <link rel="manifest" href="/manifest.json">
@@ -72,23 +73,24 @@
     <div class="dialog">
       <div class="dialog-title">Add new timetable</div>
       <div class="dialog-body">
+        <label for="selectTimetableToAdd"> Options </label>
         <select id="selectTimetableToAdd">
           <!-- Values map to Yahoo Weather API Where On Earth Identifiers (WOEIDs).
                https://developer.yahoo.com/weather/documentation.html#req -->
-          <option value="metros/1/nation/A">Nation, Direction La Défense</option>
-          <option value="metros/1/nation/R">Nation, Direction Château de Vincennes</option>
-          <option value="metros/1/bastille/A">Bastille, Direction La Défense</option>
-          <option value="metros/1/bastille/R">Bastille, Direction Château de Vincennes</option>
-          <option value="metros/1/hotel+de+ville/A">Hôtel de Ville, Direction La Défense</option>
-          <option value="metros/1/hotel+de+ville/R">Hôtel de Ville, Direction Château de Vincennes</option>
-          <option value="metros/1/chatelet/A">Châtelet, Direction La Défense</option>
-          <option value="metros/1/chatelet/R">Châtelet, Direction Château de Vincennes</option>
-          <option value="metros/1/palais+royal+(musee+du+louvre)/A">Palais-Royal (Musee du Louvre), Direction La Défense
+          <option label="nation" value="metros/1/nation/A">Nation, Direction La Défense</option>
+          <option label="nation" value="metros/1/nation/R">Nation, Direction Château de Vincennes</option>
+          <option label="bastille" value="metros/1/bastille/R">Bastille, Direction Château de Vincennes</option>
+          <option label="bastille" value="metros/1/bastille/A">Bastille, Direction La Défense</option>
+          <option label="hotel" value="metros/1/hotel+de+ville/A">Hôtel de Ville, Direction La Défense</option>
+          <option label="hotel" value="metros/1/hotel+de+ville/R">Hôtel de Ville, Direction Château de Vincennes</option>
+          <option label="chatelet" value="metros/1/chatelet/A">Châtelet, Direction La Défense</option>
+          <option label="chatelet" value="metros/1/chatelet/R">Châtelet, Direction Château de Vincennes</option>
+          <option label="palais" value="metros/1/palais+royal+(musee+du+louvre)/A">Palais-Royal (Musee du Louvre), Direction La Défense
           </option>
-          <option value="metros/1/palais+royal+(musee+du+louvre)/R">Palais-Royal (Musee du Louvre), Direction Château de
+          <option label="palais" value="metros/1/palais+royal+(musee+du+louvre)/R">Palais-Royal (Musee du Louvre), Direction Château de
             Vincennes</option>
-          <option value="metros/1/champs+elysees+clemenceau/A">Champs-Elysees-Clemenceau, Direction La Défense</option>
-          <option value="metros/1/champs+elysees+clemenceau/R">Champs-Elysees-Clemenceau, Direction Château de Vincennes
+          <option label="champs" value="metros/1/champs+elysees+clemenceau/A">Champs-Elysees-Clemenceau, Direction La Défense</option>
+          <option label="champs" value="metros/1/champs+elysees+clemenceau/R">Champs-Elysees-Clemenceau, Direction Château de Vincennes
           </option>
 
         </select>
